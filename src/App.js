@@ -1,4 +1,3 @@
-import "./App.css";
 import NavBar from "./componets/NavBar";
 import GlobalStyle from "./globalStyles";
 
