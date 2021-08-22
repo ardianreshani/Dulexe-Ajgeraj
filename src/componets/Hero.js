@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React, { useState, useRef, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";

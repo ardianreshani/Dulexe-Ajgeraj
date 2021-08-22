@@ -19,6 +19,7 @@ const MobileMenuContainer = styled.div`
   top: ${({ isOpen }) => (isOpen ? "0" : "-100")};
   @media screen and (min-width: 786px) {
     display: none;
+  }
 `;
 const Icon = styled.div`
   position: absolute;

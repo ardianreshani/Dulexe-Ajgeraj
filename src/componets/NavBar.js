@@ -6,6 +6,28 @@ import LogoSrc from "../images/Logo120.png";
 import bars from "../images/Bars.svg";
 import phoneIcone from "../images/Phone.svg";
 // import { Button } from "./Button";
+
+const NavBar = ({ toggle }) => {
+  return (
+    <Nav>
+      <Link path="/">
+        <Logo src={LogoSrc} width="100px" />
+      </Link>
+      <MenuBars onClick={toggle} />
+      <NavMenu>
+        {menuData.map((item, index) => (
+          <NavMenuLinks to={item.link} key={index}>
+            {" "}
+            {item.title}
+          </NavMenuLinks>
+        ))}
+        <PhoneNumber href="tel:0798020201">0798020201</PhoneNumber>
+      </NavMenu>
+    </Nav>
+  );
+};
+
+export default NavBar;
 const Nav = styled.nav`
   height: 60px;
   display: flex;
@@ -73,24 +95,3 @@ const PhoneNumber = styled.a`
     display: none;
   }
 `;
-const NavBar = ({ toggle }) => {
-  return (
-    <Nav>
-      <Link path="/">
-        <Logo src={LogoSrc} width="100px" />
-      </Link>
-      <MenuBars onClick={toggle} />
-      <NavMenu>
-        {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
-            {" "}
-            {item.title}
-          </NavMenuLinks>
-        ))}
-        <PhoneNumber href="tel:0798020201">0798020201</PhoneNumber>
-      </NavMenu>
-    </Nav>
-  );
-};
-
-export default NavBar;
