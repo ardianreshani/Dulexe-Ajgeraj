@@ -21,14 +21,14 @@ function App() {
         </Route>
         <Route path="/about">
           {" "}
-          <About />
+          <About toggle={toggle} isOpen={isOpen} />
         </Route>
         <Route path="/services">
           {" "}
-          <OurServices />{" "}
+          <OurServices toggle={toggle} isOpen={isOpen} />{" "}
         </Route>
         <Route path="/contact">
-          <Contact />{" "}
+          <Contact toggle={toggle} isOpen={isOpen} />{" "}
         </Route>
       </Switch>
     </>

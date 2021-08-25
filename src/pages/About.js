@@ -1,10 +1,11 @@
 import React from "react";
 import NavBar from "../componets/NavBar";
-
-const About = () => {
+import MobileMenu from "../componets/MobileMenu";
+const About = ({ toggle, isOpen }) => {
   return (
     <>
-      <NavBar />
+      <NavBar toggle={toggle} />
+      <MobileMenu toggle={toggle} isOpen={isOpen} />
       <h1>About</h1>
     </>
   );

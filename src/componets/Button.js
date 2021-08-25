@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import phoneIcone from "../images/Phone.svg";
+
 export const Button = styled(Link)`
-  background: ${({ primary }) => (primary ? "#000d1a" : "cd853f")};
+  background: #5e8016;
   outline: none;
   border: none;
   min-width: 100px;
@@ -13,11 +14,21 @@ export const Button = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: ${({ big }) => (big ? "16px 40px" : "14px 24px")};
-  color: ${({ primary }) => (primary ? "#fff" : "#000dia")};
-  font-size: ${({ big }) => (big ? "20px" : "14px")};
+  border-radius: 10px;
+  padding: 16px 60px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  @media screen and (max-width: 786px) {
+    height: 50px;
+    padding: 7px 40px;
+    font-size: 1rem;
+  }
+
   &:hover {
     transform: translateY(-2px);
+  }
+  &::active {
   }
 `;
 
@@ -43,4 +54,16 @@ export const PhoneNumber = styled.a`
   /* @media screen and (max-width: 786px) {
     display: none;
   } */
+`;
+
+export const Line = styled.span`
+  width: 200px;
+  height: 8px;
+  background-color: #5e8016;
+  border-radius: 5px;
+  margin: 3rem 0;
+  @media screen and (max-width: 786px) {
+    width: 150px;
+    margin: 2rem 0;
+  }
 `;

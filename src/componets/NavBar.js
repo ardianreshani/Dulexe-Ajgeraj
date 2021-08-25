@@ -37,7 +37,8 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  @media screen and (max-width: 768px) {
+  background-color: #fff;
+  @media (min-width: 10em) and (max-width: 70em) {
     padding: 1rem;
   }
 `;
@@ -79,6 +80,9 @@ const PhoneNumber = styled.a`
   padding: 1rem;
   color: #5e8016;
   position: relative;
+  @media (min-width: 10em) and (max-width: 70em) {
+    display: none;
+  }
   &::before {
     content: "";
     width: 50%;
@@ -90,8 +94,5 @@ const PhoneNumber = styled.a`
     position: absolute;
     top: 15px;
     right: 100px;
-  }
-  @media screen and (max-width: 786px) {
-    display: none;
   }
 `;
