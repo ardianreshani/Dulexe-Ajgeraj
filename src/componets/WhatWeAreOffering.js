@@ -38,6 +38,9 @@ const WhatWeAre = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem 8rem;
+  @media (min-width: 10em) and (max-width: 70em) {
+    padding: 1rem;
+  }
 `;
 const CardWraper = styled.div`
   display: flex;
@@ -54,7 +57,6 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0 2rem;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);

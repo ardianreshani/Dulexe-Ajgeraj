@@ -9,14 +9,9 @@ const GlobalStyle = createGlobalStyle`
         font-family:'Roboto' ,sans-serif ;
     }
     html, body{
-        
-        overflow-x: hidden;
-        
+        overflow-x: hidden; 
     }
     
-
-    /* ;
-  } */
 `;
 
 export default GlobalStyle;

@@ -10,7 +10,7 @@ const MobileMenuContainer = styled.div`
   width: 100%;
   height: 100%;
   background: #cd853f;
-  display: grid;
+  display: ${({ isOpen }) => (isOpen ? "grid" : "none")};
   align-items: center;
   top: 0;
   left: 0;
