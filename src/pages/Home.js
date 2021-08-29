@@ -4,6 +4,7 @@ import Hero from "../componets/Hero";
 import MobileMenu from "../componets/MobileMenu";
 import NavBar from "../componets/NavBar";
 import WhatWeAreOffering from "../componets/WhatWeAreOffering";
+import Whyus from "../componets/Whyus";
 
 const Home = ({ toggle, isOpen, slides }) => {
   return (
@@ -12,6 +13,7 @@ const Home = ({ toggle, isOpen, slides }) => {
       <MobileMenu toggle={toggle} isOpen={isOpen} />
       <Hero slides={slides} />
       <WhatWeAreOffering />
+      <Whyus />
       <Gallery />
     </>
   );

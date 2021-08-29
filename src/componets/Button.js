@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import phoneIcone from "../images/Phone.svg";
-
+import ArrowIcone from "../images/arrow-right.svg";
 export const Button = styled(Link)`
   background: #5e8016;
   outline: none;
@@ -65,5 +65,34 @@ export const Line = styled.span`
   @media screen and (max-width: 786px) {
     width: 150px;
     margin: 2rem 0;
+  }
+`;
+
+export const BlueLink = styled(Link)`
+  text-decoration: none;
+  margin-left: 120px;
+  color: #06538f;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5em;
+  transition: all ease 300;
+  &:hover {
+    margin-left: 125px;
+  }
+  position: relative;
+  &::after {
+    content: "";
+    width: 70%;
+    height: 70%;
+    background-image: url(${ArrowIcone});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 4px;
+    right: -50px;
+    &:hover {
+      right: -55px;
+    }
   }
 `;

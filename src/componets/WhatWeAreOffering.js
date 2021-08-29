@@ -1,11 +1,10 @@
 import React from "react";
 import { Line } from "./Button";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import Asset1 from "../images/Asset 1.png";
 import Asset2 from "../images/Asset 2.png";
 import Asset3 from "../images/Asset 3.png";
-import ArrowIcone from "../images/arrow-right.svg";
+import { BlueLink } from "./Button";
 
 const WhatWeAreOffering = () => {
   return (
@@ -16,17 +15,17 @@ const WhatWeAreOffering = () => {
         <Card>
           <CardImg src={Asset1} alt="Logo" width="220px"></CardImg>
           <CardTitle>Renovation und Umbau </CardTitle>
-          <CardBtn to="/services">Lern mehr</CardBtn>
+          <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
         <Card>
           <CardImg src={Asset2} alt="Logo" width="180px"></CardImg>
           <CardTitle>Reinigung </CardTitle>
-          <CardBtn to="/services">Lern mehr</CardBtn>
+          <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
         <Card>
           <CardImg src={Asset3} alt="Logo" width="220px"></CardImg>
           <CardTitle>Betriebsunterhaltung</CardTitle>
-          <CardBtn to="/services">Lern mehr</CardBtn>
+          <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
       </CardWraper>
     </WhatWeAre>
@@ -34,7 +33,7 @@ const WhatWeAreOffering = () => {
 };
 
 export default WhatWeAreOffering;
-const WhatWeAre = styled.div`
+export const WhatWeAre = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem 8rem;
@@ -70,31 +69,3 @@ const Card = styled.div`
 `;
 const CardImg = styled.img``;
 const CardTitle = styled.h3``;
-const CardBtn = styled(Link)`
-  text-decoration: none;
-  margin-left: 120px;
-  color: #06538f;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.5em;
-  transition: all ease 300;
-  &:hover {
-    margin-left: 125px;
-  }
-  position: relative;
-  &::after {
-    content: "";
-    width: 70%;
-    height: 70%;
-    background-image: url(${ArrowIcone});
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 4px;
-    right: -50px;
-    &:hover {
-      right: -55px;
-    }
-  }
-`;
