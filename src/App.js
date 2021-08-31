@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import OurServices from "./pages/OurServices";
 import { Route, Switch } from "react-router";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +32,8 @@ function App() {
           <Contact toggle={toggle} isOpen={isOpen} />{" "}
         </Route>
       </Switch>
+      <MessengerCustomerChat pageId="107207164985989" appId="315353580366863" />
+      ,
     </>
   );
 }

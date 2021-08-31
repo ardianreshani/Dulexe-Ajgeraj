@@ -59,8 +59,8 @@ const Footer = () => {
       </FooterStyle>
       <div className="copyright">
         <p>
-          &copy;Copyright <span id="year">{getYear()}</span> | by{" "}
-          <Link path="www.ardian.io">Ardian</Link>
+          &copy; Copyright <span id="year">{getYear()}</span> | by{" "}
+          <Link to="www.ardian.io">Ardian</Link>
         </p>
       </div>
     </>

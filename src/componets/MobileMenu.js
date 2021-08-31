@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import styled from "styled-components/macro";
 import { PhoneNumber } from "./Button";
-import { motion } from "framer-motion";
 import { NavLine } from "./NavBar";
 
 const MobileMenu = ({ toggle, isOpen }) => {
@@ -16,7 +15,7 @@ const MobileMenu = ({ toggle, isOpen }) => {
       <MobileMenuWrapper>
         <Mobilemenu>
           <div className="navContainer">
-            <MenuLink to="/" isOpen={isOpen} onClick={toggle}>
+            <MenuLink to="/" onClick={toggle}>
               Home
             </MenuLink>
             <MobileNavLine
@@ -26,7 +25,7 @@ const MobileMenu = ({ toggle, isOpen }) => {
             />
           </div>
           <div className="navContainer">
-            <MenuLink to="/about" isOpen={isOpen} onClick={toggle}>
+            <MenuLink to="/about" onClick={toggle}>
               Über Uns
             </MenuLink>
             <MobileNavLine
@@ -36,7 +35,7 @@ const MobileMenu = ({ toggle, isOpen }) => {
             />
           </div>
           <div className="navContainer">
-            <MenuLink to="/services" isOpen={isOpen} onClick={toggle}>
+            <MenuLink to="/services" onClick={toggle}>
               Referenzen
             </MenuLink>
             <MobileNavLine
@@ -46,7 +45,7 @@ const MobileMenu = ({ toggle, isOpen }) => {
             />
           </div>
           <div className="navContainer">
-            <MenuLink to="/contact" isOpen={isOpen} onClick={toggle}>
+            <MenuLink to="/contact" onClick={toggle}>
               Kontakt
             </MenuLink>
             <MobileNavLine

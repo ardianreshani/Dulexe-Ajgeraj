@@ -11,7 +11,20 @@ const GlobalStyle = createGlobalStyle`
     html, body{
         overflow-x: hidden; 
     }
-   
+    .copyright {
+    background-color: #272726;
+    color: White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    a{
+        font-weight: bold;
+        font-family: "Cinzel Decorative", cursive;
+        color: #fff;
+        text-decoration: none;
+    }
+  }
 `;
 
 export default GlobalStyle;
