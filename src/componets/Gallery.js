@@ -122,8 +122,6 @@ const ImageStyle = css`
   position: relative;
   object-fit: cover;
   transition: all ease 300;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
   &:hover ${Overlay} {
     opacity: 1;

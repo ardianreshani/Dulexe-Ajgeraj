@@ -1,26 +1,54 @@
 import React from "react";
 import styled, { css } from "styled-components/macro";
-import { Link } from "react-router-dom";
-import { menuData } from "../data/MenuData";
+import { Link, useLocation } from "react-router-dom";
 import LogoSrc from "../images/Logo120.png";
 import bars from "../images/Bars.svg";
 import phoneIcone from "../images/Phone.svg";
-// import { Button } from "./Button";
+import { motion } from "framer-motion";
 
 const NavBar = ({ toggle }) => {
+  const { pathname } = useLocation();
+
   return (
     <Nav>
-      <Link path="/">
+      <Link to="/">
         <Logo src={LogoSrc} width="100px" />
       </Link>
       <MenuBars onClick={toggle} />
       <NavMenu>
-        {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
-            {" "}
-            {item.title}
-          </NavMenuLinks>
-        ))}
+        <div className="navContainer">
+          <NavMenuLinks to="/">Home</NavMenuLinks>
+          <NavLine
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/" ? "50%" : "0%" }}
+          />
+        </div>
+        <div className="navContainer">
+          <NavMenuLinks to="/about">Über Uns</NavMenuLinks>
+          <NavLine
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/about" ? "50%" : "0%" }}
+          />
+        </div>
+        <div className="navContainer">
+          <NavMenuLinks to="/services">Referenzen</NavMenuLinks>
+          <NavLine
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/services" ? "50%" : "0%" }}
+          />
+        </div>
+        <div className="navContainer">
+          <NavMenuLinks to="/contact">Kontakt</NavMenuLinks>
+          <NavLine
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+          />
+        </div>
+
         <PhoneNumber href="tel:0798020201">0798020201</PhoneNumber>
       </NavMenu>
     </Nav>
@@ -67,9 +95,21 @@ const MenuBars = styled.i`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  .navContainer {
+    position: relative;
+  }
   @media screen and (max-width: 786px) {
     display: none;
   }
+`;
+export const NavLine = styled(motion.div)`
+  height: 0.3rem;
+  width: 0%;
+  background-color: #5e8016;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -50%;
+  left: 15%;
 `;
 const NavMenuLinks = styled(Link)`
   ${NavLinkStyle}

@@ -1,4 +1,6 @@
 import React from "react";
+import CtaCall from "../componets/CtaCall";
+import Footer from "../componets/Footer";
 import Gallery from "../componets/Gallery";
 import Hero from "../componets/Hero";
 import MobileMenu from "../componets/MobileMenu";
@@ -15,6 +17,8 @@ const Home = ({ toggle, isOpen, slides }) => {
       <WhatWeAreOffering />
       <Whyus />
       <Gallery />
+      <CtaCall />
+      <Footer />
     </>
   );
 };

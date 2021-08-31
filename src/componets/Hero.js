@@ -39,7 +39,10 @@ const Hero = ({ slides }) => {
                   <HeroImage src={slide.image} alt={slide.alt} />
                   <HeroContent>
                     <Line />
-                    <HeroTitle>{slide.title}</HeroTitle>
+                    <HeroTitle>
+                      Delu<span className="x">x</span>e <br></br>
+                      <span className="small">Ajgeraj</span>
+                    </HeroTitle>
                     <HeroSubTitle>{slide.subtitle}</HeroSubTitle>
                     <BtnWraper>
                       <Button to="/contact">Contact </Button>
@@ -180,13 +183,28 @@ const BtnWraper = styled.div`
 
 const HeroTitle = styled.h1`
   font-size: 3.75rem;
-  line-height: 1.5em;
-  letter-spacing: 0.5rem;
-  padding-bottom: 2rem;
+  font-family: "Cinzel Decorative", cursive;
+  line-height: 1em;
+
+  .x {
+    font-family: "Cinzel Decorative", cursive;
+    color: #5e8016;
+  }
+  .small {
+    margin-left: 3.5rem;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    padding-bottom: 2rem;
+  }
   @media screen and (max-width: 786px) {
     font-size: 2rem;
     padding-bottom: 1rem;
     letter-spacing: 0.1;
+    .small {
+      font-size: 1.5rem;
+      margin: 1.5rem;
+    }
   }
 `;
 const HeroSubTitle = styled.h4`

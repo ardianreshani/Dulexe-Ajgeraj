@@ -24,9 +24,10 @@ const Whyus = () => {
             <div className="content">
               <h3>Quality</h3>
               <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing.But I must explain to you how all this mistaken idea
-                of denouncing.
+                Bei der Ausführung der Arbeiten verwenden wir hochwertige
+                Naturmaterialien mit nachgewiesener Herkunft. Alle gelieferten
+                Pflanzen sind Schweiz Ursprungs, ebenso der Boden, dessen
+                Zusammensetzung dem Verwendungszweck angepasst wird.
               </p>
             </div>
           </div>
@@ -47,9 +48,9 @@ const Whyus = () => {
             <div className="content">
               <h3>Reliability</h3>
               <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing.But I must explain to you how all this mistaken idea
-                of denouncing.
+                Die Umsetzung jedes Projekts wird von den vertrauensvollen
+                Händen und den akribischen Augen des Unternehmers sorgfältig
+                überwacht.
               </p>
             </div>
           </div>
@@ -58,9 +59,10 @@ const Whyus = () => {
             <div className="content">
               <h3>Masters</h3>
               <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing.But I must explain to you how all this mistaken idea
-                of denouncing.
+                {" "}
+                Wir streben nach Perfektion in jeder Arbeit, die wir tun.
+                Basierend auf 10 Jahren Erfahrung vertrauen sowohl Stammkunden
+                als auch Neukunden jedes Jahr der Umgebung ihrer Häuser.
               </p>
             </div>
           </div>
@@ -72,12 +74,19 @@ const Whyus = () => {
 
 export default Whyus;
 
-const WhyusStyle = styled(WhatWeAre)``;
+const WhyusStyle = styled(WhatWeAre)`
+  background-color: #d7dfc5;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  margin: 0 2rem;
+  color: #262626;
+`;
 const WhyUsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+
   .title {
     padding: 1.5rem;
     text-align: center;
@@ -88,12 +97,31 @@ const WhyUsContainer = styled.div`
   .items {
     flex: 1;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     text-align: center;
+    .itemOne,
+    .itemTwo,
+    .itemThree,
+    .itemFour {
+      flex: 1;
+      margin-left: 1rem;
+    }
+    @media (min-width: 10em) and (max-width: 70em) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 70%;
+    }
   }
   .content {
+    padding-bottom: 1.5rem;
     h3 {
       padding: 1rem;
+    }
+    p {
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
   }
 `;
