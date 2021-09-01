@@ -32,8 +32,7 @@ function App() {
           <Contact toggle={toggle} isOpen={isOpen} />{" "}
         </Route>
       </Switch>
-      <MessengerCustomerChat pageId="541298042560082" appId="315353580366863" />
-      ,
+      <MessengerCustomerChat pageId="107207164985989" appId="315353580366863" />
     </>
   );
 }

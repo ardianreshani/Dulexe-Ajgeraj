@@ -22,7 +22,7 @@ const Whyus = () => {
           <div className="itemOne">
             <img src={QualityImg} alt="Quality Logo" width="120px" />
             <div className="content">
-              <h3>Quality</h3>
+              <h3>Qualität</h3>
               <p>
                 Bei der Ausführung der Arbeiten verwenden wir hochwertige
                 Naturmaterialien mit nachgewiesener Herkunft. Alle gelieferten
@@ -35,18 +35,18 @@ const Whyus = () => {
           <div className="itemTwo">
             <img src={IntegrityImg} alt="Integrity Logo" width="120px" />
             <div className="content">
-              <h3>Integrity</h3>
+              <h3>Integrität</h3>
               <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing.But I must explain to you how all this mistaken idea
-                of denouncing.
+                Wir bieten verschiedene Arten von Dienstleistungen an, die Ihnen
+                die Pflege erleichtern Renovation,Umbau,Reinigung,
+                Fugenbedichtung,Silikon,Betriebsunterhaltung
               </p>
             </div>
           </div>
           <div className="itemThree">
             <img src={ReliabilityImg} alt="Reliability Logo" width="120px" />
             <div className="content">
-              <h3>Reliability</h3>
+              <h3>Zuverlässigkeit</h3>
               <p>
                 Die Umsetzung jedes Projekts wird von den vertrauensvollen
                 Händen und den akribischen Augen des Unternehmers sorgfältig
@@ -57,7 +57,7 @@ const Whyus = () => {
           <div className="itemFour">
             <img src={MastersImg} alt="Masters Logo" width="120px" />
             <div className="content">
-              <h3>Masters</h3>
+              <h3>Meister</h3>
               <p>
                 {" "}
                 Wir streben nach Perfektion in jeder Arbeit, die wir tun.

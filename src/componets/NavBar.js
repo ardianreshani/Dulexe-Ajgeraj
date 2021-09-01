@@ -109,7 +109,7 @@ export const NavLine = styled(motion.div)`
   border-radius: 5px;
   position: absolute;
   bottom: -50%;
-  left: 15%;
+  left: 22%;
 `;
 const NavMenuLinks = styled(Link)`
   ${NavLinkStyle}
