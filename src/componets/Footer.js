@@ -96,6 +96,11 @@ const FooterStyle = styled.div`
     .contact-items {
       justify-content: center;
       text-align: left;
+      @media (min-width: 10em) and (max-width: 70em) {
+        p {
+          font-size: 1.1rem;
+        }
+      }
     }
     .contact-items:nth-child(3) {
       p {

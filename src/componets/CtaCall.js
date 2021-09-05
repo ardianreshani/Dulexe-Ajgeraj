@@ -6,4 +6,7 @@ const CtaCall = () => {
 
 export default CtaCall;
 
-const CtaCallStyle = styled.div``;
+const CtaCallStyle = styled.div`
+  width: 100%;
+  height: 33vh;
+`;

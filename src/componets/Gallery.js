@@ -95,8 +95,7 @@ const Overlay = styled.div`
   right: 0;
   height: 100%;
   width: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+
   opacity: 0;
   transition: 0.5s ease;
   background-color: rgba(0, 0, 0, 0.6);

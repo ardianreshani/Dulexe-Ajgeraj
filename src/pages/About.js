@@ -1,34 +1,28 @@
-import React from "react";
-import NavBar from "../componets/NavBar";
-import MobileMenu from "../componets/MobileMenu";
 import Footer from "../componets/Footer";
 import styled from "styled-components";
 import ImageOne from "../images/workerWithLogo.png";
 import ImageTwo from "../images/CeaningWithLogo.png";
 import ImageThree from "../images/gardenerWithLogo.png";
+import CtaCall from "../componets/CtaCall";
 const About = ({ toggle, isOpen }) => {
   return (
     <>
-      <NavBar toggle={toggle} />
-      <MobileMenu toggle={toggle} isOpen={isOpen} />
       <AboutStyle>
         <div className="fistsection">
-          <div className="imagecontainer">
-            <img src={ImageOne} alt="Worker" width="620px" height="620px" />
-          </div>
+          <div className="imagecontainer"></div>
           <div className="textcontainer">
-            <h2>DELUXE AJGERAJ</h2>
+            <h2>Unsere Mission</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores,
-              similique fuga. Ut nemo assumenda rem quia cum obcaecati soluta
-              delectus.
+              Wir sind erst zufrieden, wenn Sie zufrieden sind. Deshalb ist es
+              uns wichtig, Ihnen bei Ihrem Bau- oder Renovierungsvorhaben mit
+              Rat und Tat zur Seite stehen. An unserem Standort in Beren freuen
+              sich qualifizierte Fachleute und ein hochmotiviertes Team darauf,
+              Sie bei Ihrem Projekt zu unterstützen.
             </p>
           </div>
         </div>
         <div className="secondsection">
-          <div className="imagecontainertwo">
-            <img src={ImageTwo} alt="Worker" width="620px" height="620px" />
-          </div>
+          <div className="imagecontainertwo"></div>
           <div className="textcontainer">
             <h2>DELUXE AJGERAJ</h2>
             <p>
@@ -40,7 +34,6 @@ const About = ({ toggle, isOpen }) => {
         </div>
         <div className="thirdsection">
           <div className="imagecontainerthree">
-            <img src={ImageThree} alt="Worker" width="620px" height="620px" />
             <div className="textcontainer top">
               <h2>DELUXE AJGERAJ</h2>
               <p>
@@ -52,6 +45,7 @@ const About = ({ toggle, isOpen }) => {
           </div>
         </div>
       </AboutStyle>
+      <CtaCall />
       <Footer />
     </>
   );
@@ -63,6 +57,9 @@ const AboutStyle = styled.div`
   .thirdsection {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 786px) {
+      flex-direction: column;
+    }
   }
   .textcontainer {
     flex: 1;
@@ -79,22 +76,60 @@ const AboutStyle = styled.div`
     .textcontainer {
       order: 0;
     }
+    @media screen and (max-width: 786px) {
+      .imagecontainertwo {
+        order: 0;
+      }
+      .textcontainer {
+        order: 1;
+      }
+    }
   }
   .imagecontainer {
     width: 50%;
+    height: 620px;
     background-color: #ffc2ac;
+    background-image: url(${ImageOne});
+    background-size: 620px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media screen and (max-width: 786px) {
+      width: 100%;
+      height: 350px;
+      background-size: 350px;
+    }
   }
   .imagecontainertwo {
     width: 50%;
+    height: 620px;
     background-color: #c3def1;
+    background-image: url(${ImageTwo});
+    background-size: 620px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media screen and (max-width: 786px) {
+      width: 100%;
+      height: 350px;
+      background-size: 350px;
+    }
   }
   .thirdsection {
   }
   .imagecontainerthree {
     width: 100%;
+    height: 620px;
     position: relative;
     background-color: #9fe5c3;
+    background-image: url(${ImageThree});
+    background-size: 610px;
+    background-repeat: no-repeat;
+    background-position: left;
     z-index: 0;
+    @media screen and (max-width: 786px) {
+      width: 100%;
+      height: 350px;
+      background-size: 350px;
+    }
   }
   .top {
     flex: 0;

@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import OurServices from "./pages/OurServices";
 import { Route, Switch } from "react-router";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import NavBar from "./componets/NavBar";
+import MobileMenu from "./componets/MobileMenu";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +18,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <NavBar toggle={toggle} />
+      <MobileMenu toggle={toggle} isOpen={isOpen} />
       <Switch>
         <Route exact path="/">
           <Home toggle={toggle} isOpen={isOpen} slides={SliderData} />{" "}
