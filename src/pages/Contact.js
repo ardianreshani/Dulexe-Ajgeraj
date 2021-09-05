@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Map from "../images/placeholder.png";
 import Phone from "../images/phone-call.png";
 import Email from "../images/envelope.png";
+
 const Contact = ({ toggle, isOpen }) => {
   return (
     <ContactStyle>
@@ -15,7 +16,7 @@ const Contact = ({ toggle, isOpen }) => {
         <div className="from">
           <form
             name="contact"
-            action="/contact"
+            action="/thank-you"
             method="POST"
             netlify
             netlify-honeypot="bot-field"

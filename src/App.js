@@ -9,6 +9,7 @@ import { Route, Switch } from "react-router";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import NavBar from "./componets/NavBar";
 import MobileMenu from "./componets/MobileMenu";
+import Thankyou from "./componets/Thankyou";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact toggle={toggle} isOpen={isOpen} />{" "}
+        </Route>
+        <Route path="/thank-you">
+          <Thankyou />
         </Route>
       </Switch>
       <MessengerCustomerChat pageId="107207164985989" appId="315353580366863" />
