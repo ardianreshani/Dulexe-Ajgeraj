@@ -13,44 +13,29 @@ const Contact = ({ toggle, isOpen }) => {
       <div className="wraper">
         {" "}
         <div className="from">
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            method="POST"
+            netlify
+            netlify-honeypot="bot-field"
+            hidden
+          >
             <label>
-              Vorname und Nachname: *{" "}
-              <input
-                type="text"
-                name="name"
-                placeholder="Gib deinen Namen ein ..."
-                required
-              />
+              Vorname und Nachname: * <input type="text" name="name" required />
             </label>
             <label>
               E-mail Adresse: *
-              <input
-                type="email"
-                name="email"
-                placeholder="Tippe deine E-Mail ein..."
-                required
-              />
+              <input type="email" name="email" required />
             </label>
             <label>
               Telefonnummer: *
-              <input
-                type="number"
-                name="number"
-                placeholder="Gib deine Telefonnummer ein..."
-                required
-              />
+              <input type="number" name="number" required />
             </label>
             <label>
               Nachricht: *
-              <textarea
-                name="message"
-                placeholder="Geben Sie eine beliebige Nachricht ein ..."
-                cols="5"
-                rows="1"
-                required
-              ></textarea>
+              <textarea name="message" cols="5" rows="1" required></textarea>
             </label>
+            <input type="hidden" name="contact" value="contact" />
             <button type="submit">Send</button>
           </form>
         </div>
@@ -124,7 +109,7 @@ const ContactStyle = styled.div`
       border-bottom-left-radius: 10px;
       padding: 5rem;
       width: 38vw;
-      height: 70vh;
+      height: 72vh;
       display: flex;
       align-items: center;
       justify-content: left;

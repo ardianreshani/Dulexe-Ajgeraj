@@ -78,7 +78,7 @@ const WhyusStyle = styled(WhatWeAre)`
   background-color: #d7dfc5;
   border-top-right-radius: 150px;
   border-bottom-left-radius: 150px;
-  margin: 0 2rem;
+
   color: #262626;
 `;
 const WhyUsContainer = styled.div`
