@@ -36,7 +36,7 @@ function App() {
         <Route path="/contact">
           <Contact toggle={toggle} isOpen={isOpen} />{" "}
         </Route>
-        <Route path="/thank-you">
+        <Route path="*">
           <Thankyou />
         </Route>
       </Switch>
