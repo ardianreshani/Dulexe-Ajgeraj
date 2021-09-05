@@ -15,10 +15,12 @@ const Contact = ({ toggle, isOpen }) => {
         <div className="from">
           <form
             name="contact"
+            action="/contact"
             method="POST"
             netlify
             netlify-honeypot="bot-field"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <label>
               Vorname und Nachname: * <input type="text" name="name" required />
             </label>
