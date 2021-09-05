@@ -18,7 +18,6 @@ const Contact = ({ toggle, isOpen }) => {
             method="POST"
             netlify
             netlify-honeypot="bot-field"
-            hidden
           >
             <label>
               Vorname und Nachname: * <input type="text" name="name" required />
@@ -35,7 +34,6 @@ const Contact = ({ toggle, isOpen }) => {
               Nachricht: *
               <textarea name="message" cols="5" rows="1" required></textarea>
             </label>
-            <input type="hidden" name="contact" value="contact" />
             <button type="submit">Send</button>
           </form>
         </div>
