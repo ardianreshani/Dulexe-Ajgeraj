@@ -9,7 +9,8 @@ import { Route, Switch } from "react-router";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import NavBar from "./componets/NavBar";
 import MobileMenu from "./componets/MobileMenu";
-import Thankyou from "./componets/Thankyou";
+// import Thankyou from "./componets/Thankyou";
+import Error404 from "./componets/Error404";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <GlobalStyle />
       <NavBar toggle={toggle} />
       <MobileMenu toggle={toggle} isOpen={isOpen} />
+
       <Switch>
         <Route exact path="/">
           <Home toggle={toggle} isOpen={isOpen} slides={SliderData} />{" "}
@@ -37,7 +39,7 @@ function App() {
           <Contact toggle={toggle} isOpen={isOpen} />{" "}
         </Route>
         <Route path="*">
-          <Thankyou />
+          <Error404 />
         </Route>
       </Switch>
       <MessengerCustomerChat pageId="107207164985989" appId="315353580366863" />

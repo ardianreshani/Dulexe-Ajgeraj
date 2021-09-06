@@ -17,7 +17,7 @@ const Footer = () => {
     <>
       <FooterStyle>
         <div className="logofooter">
-          <img src={LogoFooter} alt="Logo Footer" width="150px" />
+          <img src={LogoFooter} alt="Logo Footer" width="150px" height="80px" />
         </div>
         <div className="menu">
           <nav>
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="contact">
           <h3>Kontakt</h3>
           <div className="contact-items">
-            <img src={Map} alt="Map logo" width="34px" height="34px" />
+            <img src={Map} alt="Maplogo" width="34px" height="34px" />
             <p>
               Deluxe Ajgeraj
               <br /> Ländlistrasse 10, <br />
@@ -40,11 +40,11 @@ const Footer = () => {
             </p>
           </div>
           <div className="contact-items">
-            <img src={Phone} alt="Phone logo" width="34px" height="34px" />
+            <img src={Phone} alt="Phonelogo" width="34px" height="34px" />
             <p>0798020201</p>
           </div>
           <div className="contact-items">
-            <img src={Email} alt="Email logo" width="34px" height="34px" />
+            <img src={Email} alt="Emaillogo" width="34px" height="34px" />
             <p>info@deluxeajgeraj.ch</p>
           </div>
           <div className="contact-items">

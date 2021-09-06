@@ -20,7 +20,12 @@ const Whyus = () => {
         </div>
         <div className="items">
           <div className="itemOne">
-            <img src={QualityImg} alt="Quality Logo" width="120px" />
+            <img
+              src={QualityImg}
+              alt="Quality Logo"
+              width="120px"
+              height="120px"
+            />
             <div className="content">
               <h3>Qualität</h3>
               <p>
@@ -33,7 +38,12 @@ const Whyus = () => {
           </div>
 
           <div className="itemTwo">
-            <img src={IntegrityImg} alt="Integrity Logo" width="120px" />
+            <img
+              src={IntegrityImg}
+              alt="Integrity Logo"
+              width="120px"
+              height="120px"
+            />
             <div className="content">
               <h3>Integrität</h3>
               <p>
@@ -44,7 +54,12 @@ const Whyus = () => {
             </div>
           </div>
           <div className="itemThree">
-            <img src={ReliabilityImg} alt="Reliability Logo" width="120px" />
+            <img
+              src={ReliabilityImg}
+              alt="Reliability Logo"
+              width="120px"
+              height="120px"
+            />
             <div className="content">
               <h3>Zuverlässigkeit</h3>
               <p>
@@ -55,7 +70,12 @@ const Whyus = () => {
             </div>
           </div>
           <div className="itemFour">
-            <img src={MastersImg} alt="Masters Logo" width="120px" />
+            <img
+              src={MastersImg}
+              alt="Masters Logo"
+              width="120px"
+              height="120px"
+            />
             <div className="content">
               <h3>Meister</h3>
               <p>

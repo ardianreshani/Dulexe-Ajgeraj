@@ -36,7 +36,12 @@ const Hero = ({ slides }) => {
             <HeroSlide key={index}>
               {index === current && (
                 <HeroSlider>
-                  <HeroImage src={slide.image} alt={slide.alt} />
+                  <HeroImage
+                    src={slide.image}
+                    alt={slide.alt}
+                    width="100%"
+                    height="100%"
+                  />
                   <HeroContent>
                     <Line />
                     <HeroTitle>

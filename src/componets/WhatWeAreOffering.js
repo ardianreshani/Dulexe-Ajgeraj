@@ -13,17 +13,32 @@ const WhatWeAreOffering = () => {
       <h2>Unsere Leistungen</h2>
       <CardWraper>
         <Card>
-          <CardImg src={Asset1} alt="Logo" width="220px"></CardImg>
+          <CardImg
+            src={Asset1}
+            alt="Logo"
+            width="220px"
+            height="auto"
+          ></CardImg>
           <CardTitle>Renovation und Umbau </CardTitle>
           <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
         <Card>
-          <CardImg src={Asset2} alt="Logo" width="180px"></CardImg>
+          <CardImg
+            src={Asset2}
+            alt="Logo"
+            width="180px"
+            height="auto"
+          ></CardImg>
           <CardTitle>Reinigung </CardTitle>
           <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
         <Card>
-          <CardImg src={Asset3} alt="Logo" width="220px"></CardImg>
+          <CardImg
+            src={Asset3}
+            alt="Logo"
+            width="220px"
+            height="auto"
+          ></CardImg>
           <CardTitle>Betriebsunterhaltung</CardTitle>
           <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
