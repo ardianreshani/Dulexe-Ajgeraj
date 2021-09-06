@@ -9,7 +9,7 @@ import { Route, Switch } from "react-router";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import NavBar from "./componets/NavBar";
 import MobileMenu from "./componets/MobileMenu";
-// import Thankyou from "./componets/Thankyou";
+import Success from "./componets/Success";
 import Error404 from "./componets/Error404";
 
 function App() {
@@ -40,6 +40,9 @@ function App() {
         </Route>
         <Route path="*">
           <Error404 />
+        </Route>
+        <Route path="/success/">
+          <Success />
         </Route>
       </Switch>
       <MessengerCustomerChat pageId="107207164985989" appId="315353580366863" />

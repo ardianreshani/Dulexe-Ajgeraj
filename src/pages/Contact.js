@@ -16,8 +16,9 @@ const Contact = ({ toggle, isOpen }) => {
         <div className="from">
           <form
             name="contact"
-            action="/thank-you"
+            action="/success/"
             method="POST"
+            data-netlify-recaptcha="true"
             netlify
             netlify-honeypot="bot-field"
           >
@@ -37,6 +38,7 @@ const Contact = ({ toggle, isOpen }) => {
               <textarea name="message" cols="5" rows="1" required></textarea>
             </label>
             <input type="hidden" name="form-name" value="contact" />
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Send</button>
           </form>
         </div>
