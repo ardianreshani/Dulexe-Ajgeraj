@@ -60,7 +60,9 @@ const Footer = () => {
       <div className="copyright">
         <p>
           &copy; Copyright <span id="year">{getYear()}</span> | by{" "}
-          <Link to="www.ardian.io">Ardian</Link>
+          <Link to={{ pathname: "www.ardian.io" }} target="_blank">
+            Ardian
+          </Link>
         </p>
       </div>
     </>

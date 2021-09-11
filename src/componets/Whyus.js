@@ -30,9 +30,8 @@ const Whyus = () => {
               <h3>Qualität</h3>
               <p>
                 Bei der Ausführung der Arbeiten verwenden wir hochwertige
-                Naturmaterialien mit nachgewiesener Herkunft. Alle gelieferten
-                Pflanzen sind Schweiz Ursprungs, ebenso der Boden, dessen
-                Zusammensetzung dem Verwendungszweck angepasst wird.
+                Materialien mit nachgewiesener Herkunft. Alle Baumaterialien
+                sind Schweizer Ursprungs.
               </p>
             </div>
           </div>
@@ -63,9 +62,8 @@ const Whyus = () => {
             <div className="content">
               <h3>Zuverlässigkeit</h3>
               <p>
-                Die Umsetzung jedes Projekts wird von den vertrauensvollen
-                Händen und den akribischen Augen des Unternehmers sorgfältig
-                überwacht.
+                Die Umsetzung des Projekts wird von den vertrauensvollen Händen
+                und den akribischen Augen des Unternehmers sorgfältig überwacht.
               </p>
             </div>
           </div>

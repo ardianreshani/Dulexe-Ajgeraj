@@ -2,10 +2,16 @@ import styled from "styled-components";
 import Map from "../images/placeholder.png";
 import Phone from "../images/phone-call.png";
 import Email from "../images/envelope.png";
-
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animate";
 const Contact = ({ toggle, isOpen }) => {
   return (
-    <ContactStyle>
+    <ContactStyle
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <div className="header">
         <h1>Kontakt Uns</h1>
         <p>Schreibt uns eine Nachricht und wir melden uns bei euch</p>
@@ -67,7 +73,7 @@ const Contact = ({ toggle, isOpen }) => {
 
 export default Contact;
 
-const ContactStyle = styled.div`
+const ContactStyle = styled(motion.div)`
   padding-top: 80px;
   position: relative;
   .header {

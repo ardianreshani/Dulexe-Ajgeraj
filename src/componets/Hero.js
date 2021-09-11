@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { Button, Line } from "./Button";
-
+import { motion } from "framer-motion";
 const Hero = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -28,6 +28,7 @@ const Hero = ({ slides }) => {
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
+
   return (
     <HeroSection>
       <HeroWrapper>
@@ -44,7 +45,7 @@ const Hero = ({ slides }) => {
                   />
                   <HeroContent>
                     <Line />
-                    <HeroTitle>
+                    <HeroTitle initial="hidden" animate="show">
                       Delu<span className="x">x</span>e <br></br>
                       <span className="small">Ajgeraj</span>
                     </HeroTitle>
@@ -121,7 +122,7 @@ const HeroSlider = styled.div`
     background-color: rgba(0, 0, 0, 9);
   }
 `;
-const HeroImage = styled.img`
+const HeroImage = styled(motion.img)`
   position: absolute;
   top: 0;
   left: 0;
@@ -130,7 +131,6 @@ const HeroImage = styled.img`
   object-fit: cover;
 `;
 const HeroContent = styled.div`
-  position: relative;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -167,6 +167,9 @@ const ArrowButtons = css`
   margin-right: 1rem;
   user-select: none;
   transition: 0.3s;
+  @media only screen and (max-width: 320px) {
+    display: none;
+  }
   @media screen and (max-width: 786px) {
     width: 40px;
     height: 40px;
@@ -186,7 +189,7 @@ const BtnWraper = styled.div`
   display: flex;
 `;
 
-const HeroTitle = styled.h1`
+const HeroTitle = styled(motion.h1)`
   font-size: 3.75rem;
   font-family: "Cinzel Decorative", cursive;
   line-height: 1em;
@@ -212,12 +215,15 @@ const HeroTitle = styled.h1`
     }
   }
 `;
-const HeroSubTitle = styled.h4`
+const HeroSubTitle = styled(motion.h4)`
   font-size: 1.3rem;
   line-height: 1.4em;
   width: 50%;
   font-weight: 400;
   padding-bottom: 2rem;
+  @media only screen and (max-width: 320px) {
+    display: none;
+  }
   @media screen and (max-width: 786px) {
     font-size: 0.9rem;
     width: 80%;

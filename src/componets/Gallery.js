@@ -16,34 +16,34 @@ const Gallery = () => {
       <GalleryWraper>
         <ImageOne>
           <Overlay>
-            <HoverLink to="/service">Mehr sehen</HoverLink>
+            <HoverLink to="/services">Mehr sehen</HoverLink>
           </Overlay>{" "}
         </ImageOne>
         <ImageTwo>
           {" "}
           <Overlay>
-            <HoverLink to="/service">Mehr sehen</HoverLink>
+            <HoverLink to="/services">Mehr sehen</HoverLink>
           </Overlay>{" "}
         </ImageTwo>
         <ImageThree>
           {" "}
           <Overlay>
-            <HoverLink to="/service">Mehr sehen</HoverLink>
+            <HoverLink to="/services">Mehr sehen</HoverLink>
           </Overlay>{" "}
         </ImageThree>
         <ImageFore>
           <Overlay>
-            <HoverLink to="/service">Mehr sehen</HoverLink>
+            <HoverLink to="/services">Mehr sehen</HoverLink>
           </Overlay>{" "}
         </ImageFore>
         <ImageFive>
           <Overlay>
-            <HoverLink to="/service">Mehr sehen</HoverLink>
+            <HoverLink to="/services">Mehr sehen</HoverLink>
           </Overlay>{" "}
         </ImageFive>
         <ImageSix>
           <Overlay>
-            <HoverLink to="/service">Mehr sehen</HoverLink>
+            <HoverLink to="/services">Mehr sehen</HoverLink>
           </Overlay>{" "}
         </ImageSix>
       </GalleryWraper>

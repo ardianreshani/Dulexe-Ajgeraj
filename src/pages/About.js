@@ -4,9 +4,16 @@ import ImageOne from "../images/workerWithLogo.png";
 import ImageTwo from "../images/CeaningWithLogo.png";
 import ImageThree from "../images/gardenerWithLogo.png";
 import CtaCall from "../componets/CtaCall";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animate";
 const About = ({ toggle, isOpen }) => {
   return (
-    <>
+    <motion.div
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
       <AboutStyle>
         <div className="fistsection">
           <div className="imagecontainer"></div>
@@ -47,7 +54,7 @@ const About = ({ toggle, isOpen }) => {
       </AboutStyle>
       <CtaCall />
       <Footer />
-    </>
+    </motion.div>
   );
 };
 const AboutStyle = styled.div`
