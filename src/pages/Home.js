@@ -5,6 +5,7 @@ import WhatWeAreOffering from "../componets/WhatWeAreOffering";
 import Whyus from "../componets/Whyus";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animate";
+
 const Home = ({ toggle, isOpen, slides }) => {
   return (
     <motion.div

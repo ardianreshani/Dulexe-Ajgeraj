@@ -106,8 +106,7 @@ const HeroSlider = styled.div`
   padding: 0rem 8rem;
   @media (min-width: 10em) and (max-width: 70em) {
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    padding: 0 2rem;
   }
 
   &::before {

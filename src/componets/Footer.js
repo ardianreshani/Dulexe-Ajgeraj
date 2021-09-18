@@ -13,6 +13,10 @@ const Footer = () => {
   const getYear = () => {
     return new Date().getFullYear();
   };
+  const goto = (props) => {
+    return (window.location.href = `${props}`);
+  };
+
   return (
     <>
       <FooterStyle>
@@ -45,10 +49,14 @@ const Footer = () => {
           </div>
           <div className="contact-items">
             <img src={Email} alt="Emaillogo" width="34px" height="34px" />
-            <p>info@deluxeajgeraj.ch</p>
+            <p>info@deluxeinfo.ch</p>
           </div>
           <div className="contact-items">
-            <Link to="https://www.facebook.com/Deluxe-Ajgeraj-107207164985989">
+            <Link
+              onClick={() =>
+                goto("https://www.facebook.com/Deluxe-Ajgeraj-107207164985989")
+              }
+            >
               <img src={FbIcone} alt="FbIcone" width="34px" />
             </Link>
             <Link to="#">
@@ -60,9 +68,7 @@ const Footer = () => {
       <div className="copyright">
         <p>
           &copy; Copyright <span id="year">{getYear()}</span> | by{" "}
-          <Link to={{ pathname: "www.ardian.io" }} target="_blank">
-            Ardian
-          </Link>
+          <Link onClick={() => goto("https://www.ardian.io")}>Ardian</Link>
         </p>
       </div>
     </>
@@ -98,11 +104,6 @@ const FooterStyle = styled.div`
     .contact-items {
       justify-content: center;
       text-align: left;
-      @media (min-width: 10em) and (max-width: 70em) {
-        p {
-          font-size: 1.1rem;
-        }
-      }
     }
     .contact-items:nth-child(3) {
       p {
@@ -111,7 +112,7 @@ const FooterStyle = styled.div`
     }
     .contact-items:nth-child(4) {
       p {
-        padding-right: 20px;
+        padding-right: 45px;
       }
     }
   }

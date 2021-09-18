@@ -67,7 +67,7 @@ const MobileMenuContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #cd853f;
+  background: #fff;
   display: ${({ isOpen }) => (isOpen ? "grid" : "none")};
   align-items: center;
   top: 0;
@@ -75,6 +75,7 @@ const MobileMenuContainer = styled.div`
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100")};
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
   @media screen and (min-width: 786px) {
     display: none;
   }
@@ -111,7 +112,7 @@ const Mobilemenu = styled.div`
   }
 `;
 const MenuLink = styled(Link)`
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
   font-size: 17px;

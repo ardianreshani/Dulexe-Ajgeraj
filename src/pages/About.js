@@ -3,7 +3,6 @@ import styled from "styled-components";
 import ImageOne from "../images/workerWithLogo.png";
 import ImageTwo from "../images/CeaningWithLogo.png";
 import ImageThree from "../images/gardenerWithLogo.png";
-import CtaCall from "../componets/CtaCall";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animate";
 const About = ({ toggle, isOpen }) => {
@@ -52,12 +51,12 @@ const About = ({ toggle, isOpen }) => {
           </div>
         </div>
       </AboutStyle>
-      <CtaCall />
       <Footer />
     </motion.div>
   );
 };
 const AboutStyle = styled.div`
+  line-height: 1.5rem;
   padding: 2rem 0;
   .fistsection,
   .secondsection,
@@ -75,6 +74,9 @@ const AboutStyle = styled.div`
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    h2 {
+      padding: 1rem 0;
+    }
   }
   .secondsection {
     .imagecontainertwo {
@@ -132,10 +134,12 @@ const AboutStyle = styled.div`
     background-repeat: no-repeat;
     background-position: left;
     z-index: 0;
+
     @media screen and (max-width: 786px) {
       width: 100%;
       height: 350px;
       background-size: 350px;
+      margin-bottom: 12rem;
     }
   }
   .top {
@@ -145,6 +149,11 @@ const AboutStyle = styled.div`
     left: 50%;
     z-index: 1;
     color: #272727;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      top: 100%;
+      left: 0;
+    }
   }
 `;
 

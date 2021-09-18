@@ -66,6 +66,7 @@ const Nav = styled.nav`
   position: fixed;
   width: 100%;
   background-color: #fff;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
   @media (min-width: 10em) and (max-width: 70em) {
     padding: 1rem;
   }
@@ -76,6 +77,9 @@ const NavLinkStyle = css`
   font-weight: 500;
   text-decoration: none;
   font-size: 17px;
+  @media (min-width: 1050px) and (max-width: 1300px) {
+    margin: 1rem;
+  }
 `;
 const Logo = styled.img``;
 

@@ -112,17 +112,22 @@ const ContactStyle = styled(motion.div)`
       left: 0;
       margin: 0 1rem;
     }
+    @media screen and (min-width: 787px) and (max-width: 1300px) {
+      top: 20vh;
+      left: 10%;
+    }
+
     .from {
       background-color: #fff;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
       padding: 5rem;
-      width: 38vw;
+
       height: 72vh;
       display: flex;
       align-items: center;
       justify-content: left;
-      @media screen and (max-width: 786px) {
+      @media screen and (max-width: 1024px) {
         padding: 1rem;
         width: 100%;
         border-top-right-radius: 10px;

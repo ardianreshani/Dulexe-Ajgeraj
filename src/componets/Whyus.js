@@ -96,20 +96,25 @@ const WhyusStyle = styled(WhatWeAre)`
   background-color: #d7dfc5;
   border-top-right-radius: 150px;
   border-bottom-left-radius: 150px;
-
   color: #262626;
+  @media (min-width: 300px) and (max-width: 786px) {
+    padding: 1rem 2rem;
+  }
 `;
 const WhyUsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
-
+  text-align: center;
   .title {
     padding: 1.5rem;
     text-align: center;
     h2 {
-      padding: 0.5rem 0;
+      padding: 0.8rem 0;
+    }
+    p {
+      padding: 0.8rem 0;
     }
   }
   .items {
@@ -117,7 +122,7 @@ const WhyUsContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    text-align: center;
+
     .itemOne,
     .itemTwo,
     .itemThree,
@@ -125,10 +130,9 @@ const WhyUsContainer = styled.div`
       flex: 1;
       margin-left: 1rem;
     }
-    @media (min-width: 10em) and (max-width: 70em) {
+    @media (min-width: 10em) and (max-width: 60em) {
       flex-direction: column;
       flex-wrap: wrap;
-      width: 70%;
     }
   }
   .content {

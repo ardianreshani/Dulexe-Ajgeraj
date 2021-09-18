@@ -80,6 +80,11 @@ const TagButton = ({ name, handleSetTag, tagActive }) => {
 const ServicesStyle = styled(motion.div)`
   padding-top: 5rem;
   text-align: center;
+  .tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
   h1 {
     padding-bottom: 1rem;
   }
@@ -93,13 +98,33 @@ const ServicesStyle = styled(motion.div)`
     border: 0;
     cursor: pointer;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      margin: 1rem;
+      padding: 10px 25px;
+    }
   }
   .container {
+    > * div {
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
+    }
     width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-columns: 1fr;
-    gap: 10px;
+    gap: 1rem;
+    @media screen and (min-width: 768px) and (max-width: 1300px) {
+      width: 90%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      img {
+        width: 300px;
+        height: 200px;
+        aspect-ratio: 16/9;
+      }
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
   }
 `;

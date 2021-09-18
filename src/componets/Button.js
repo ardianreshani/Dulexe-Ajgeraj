@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import phoneIcone from "../images/Phone.svg";
 import ArrowIcone from "../images/arrow-right.svg";
 export const Button = styled(Link)`
-  background: #5e8016;
+  background: linear-gradient(
+    90deg,
+    hsla(79, 94%, 35%, 1) 15%,
+    hsla(79, 71%, 29%, 1) 100%
+  );
+  /* background: #5e8016; */
   outline: none;
   border: none;
   min-width: 100px;

@@ -22,7 +22,7 @@ const WhatWeAreOffering = () => {
           <CardTitle>Renovation und Umbau </CardTitle>
           <BlueLink to="/services">Lern mehr</BlueLink>
         </Card>
-        <Card>
+        <Card className="middel">
           <CardImg
             src={Asset2}
             alt="Logo"
@@ -52,8 +52,8 @@ export const WhatWeAre = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem 8rem;
-  @media (min-width: 10em) and (max-width: 70em) {
-    padding: 1rem;
+  @media (min-width: 300px) and (max-width: 786px) {
+    padding: 1rem 2rem;
   }
 `;
 const CardWraper = styled.div`
@@ -61,6 +61,13 @@ const CardWraper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  .middel {
+    @media (min-width: 300px) and (max-width: 550px) {
+      img {
+        width: 220px;
+      }
+    }
+  }
 `;
 const Card = styled.div`
   flex: 1;
@@ -77,6 +84,10 @@ const Card = styled.div`
   padding: 2rem;
   margin: 2rem auto;
   transition: all ease 300;
+
+  @media (min-width: 1100px) and (max-width: 1300px) {
+    margin: 1rem;
+  }
 
   &:hover {
     transform: scale(1.05);

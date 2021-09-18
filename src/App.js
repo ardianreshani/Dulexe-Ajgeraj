@@ -47,7 +47,6 @@ function App() {
           </Route>
         </Switch>
       </AnimatePresence>
-      {/* <MessengerCustomerChat pageId="107207164985989" appId="315353580366863" /> */}
     </>
   );
 }
