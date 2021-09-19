@@ -2,9 +2,15 @@ import styled from "styled-components";
 import Map from "../images/placeholder.png";
 import Phone from "../images/phone-call.png";
 import Email from "../images/envelope.png";
+import Footer from "../componets/Footer";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animate";
-const Contact = ({ toggle, isOpen }) => {
+import { useForm, ValidationError } from "@formspree/react";
+const Contact = () => {
+  const [state, handleSubmit] = useForm("mleazlgw");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <ContactStyle
       exit="exit"
@@ -20,32 +26,45 @@ const Contact = ({ toggle, isOpen }) => {
       <div className="wraper">
         {" "}
         <div className="from">
-          <form
-            name="contact"
-            action="/success/"
-            method="POST"
-            data-netlify-recaptcha="true"
-            netlify
-            netlify-honeypot="bot-field"
-          >
+          <form onSubmit={handleSubmit}>
             <label>
-              Vorname und Nachname: * <input type="text" name="name" required />
+              Vorname und Nachname: * <input type="text" name="name" />
             </label>
+            <ValidationError prefix="name" field="name" errors={state.errors} />
             <label>
               E-mail Adresse: *
-              <input type="email" name="email" required />
+              <input type="email" name="email" />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
             </label>
             <label>
               Telefonnummer: *
               <input type="number" name="number" required />
+              <ValidationError
+                prefix="Number"
+                field="number"
+                errors={state.errors}
+              />
             </label>
             <label>
-              Nachricht: *
-              <textarea name="message" cols="5" rows="1" required></textarea>
+              Nachricht: *<textarea name="message" cols="5" rows="1"></textarea>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </label>
             <input type="hidden" name="form-name" value="contact" />
-            <div data-netlify-recaptcha="true"></div>
-            <button type="submit">Send</button>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lf3IXkcAAAAAFZYUN6TuqzWAFxF-ni0RQ7Sf_t8"
+            ></div>
+            <button type="submit" disabled={state.submitting}>
+              Send
+            </button>
           </form>
         </div>
         <div className="info">
@@ -67,6 +86,7 @@ const Contact = ({ toggle, isOpen }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </ContactStyle>
   );
 };
@@ -74,11 +94,10 @@ const Contact = ({ toggle, isOpen }) => {
 export default Contact;
 
 const ContactStyle = styled(motion.div)`
-  padding-top: 80px;
   position: relative;
   .header {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background: hsla(145, 84%, 73%, 1);
     background: linear-gradient(
       90deg,
@@ -91,24 +110,30 @@ const ContactStyle = styled(motion.div)`
     align-items: center;
     padding-top: 4.5rem;
     color: #fff;
-    margin-bottom: 20rem;
+    margin-bottom: 23rem;
+    @media screen and (max-width: 786px) {
+      height: 40vh;
+      margin-bottom: 45rem;
+    }
 
     h1 {
       font-weight: 400;
       font-size: 3rem;
-      padding-bottom: 1rem;
+      padding: 1rem;
     }
   }
   .wraper {
     position: absolute;
-    top: 30vh;
+    top: 28vh;
     left: 20%;
     display: flex;
+    height: 65vh;
     border-radius: 10px;
-    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+
     @media screen and (max-width: 786px) {
       flex-direction: column;
-      top: 40vh;
+      top: 30vh;
+      height: 40vh;
       left: 0;
       margin: 0 1rem;
     }
@@ -122,18 +147,25 @@ const ContactStyle = styled(motion.div)`
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
       padding: 5rem;
-
-      height: 72vh;
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: left;
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+      @media screen and (max-width: 786px) {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+      }
       @media screen and (max-width: 1024px) {
         padding: 1rem;
         width: 100%;
-        border-top-right-radius: 10px;
         &input:focus {
           margin-top: 2rem;
         }
+      }
+      @media screen and (min-width: 787px) and (max-width: 1300px) {
+        top: 20vh;
+        left: 10%;
       }
     }
     .info {
@@ -146,10 +178,16 @@ const ContactStyle = styled(motion.div)`
       text-align: left;
       align-items: left;
       justify-content: center;
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+      @media screen and (max-width: 786px) {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+      }
       .contact-items {
         display: flex;
         align-items: center;
         padding: 1rem;
+
         img {
           margin-right: 1rem;
         }

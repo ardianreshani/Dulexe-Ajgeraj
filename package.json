@@ -1,9 +1,10 @@
 {
   "name": "dulexe",
-  "homepage":"https://deluxeinfo.ch/",
+  "homepage": "https://deluxeinfo.ch/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -11,8 +12,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-intersection-observer": "^8.32.1",
-    "react-messenger-customer-chat": "^0.8.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "simple-react-lightbox": "^3.6.9-0",

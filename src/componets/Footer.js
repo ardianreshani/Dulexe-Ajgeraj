@@ -59,7 +59,9 @@ const Footer = () => {
             >
               <img src={FbIcone} alt="FbIcone" width="34px" />
             </Link>
-            <Link to="#">
+            <Link
+              onClick={() => goto("https://www.instagram.com/deluxeajgeraj/")}
+            >
               <img src={InstagramICon} alt="InstagramICon" width="34px" />
             </Link>
           </div>

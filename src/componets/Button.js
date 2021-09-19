@@ -54,7 +54,7 @@ export const PhoneNumber = styled.a`
     background-position: center;
     position: absolute;
     top: 15px;
-    right: 100px;
+    right: 110px;
   }
   /* @media screen and (max-width: 786px) {
     display: none;
