@@ -42,7 +42,7 @@ const Contact = () => {
             </label>
             <label>
               Telefonnummer: *
-              <input type="number" name="number" required />
+              <input type="number" name="number" />
               <ValidationError
                 prefix="Number"
                 field="number"

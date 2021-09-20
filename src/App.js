@@ -11,7 +11,7 @@ import MobileMenu from "./componets/MobileMenu";
 import Success from "./componets/Success";
 import Error404 from "./componets/Error404";
 import { AnimatePresence } from "framer-motion";
-
+import ScrollToTop from "./componets/ScrollToTop";
 function App() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +24,7 @@ function App() {
       <NavBar toggle={toggle} />
       <MobileMenu toggle={toggle} isOpen={isOpen} />
       <AnimatePresence exitBeforeEnter>
+        <ScrollToTop />
         <Switch location={location} key={location.pathname}>
           <Route exact path="/">
             <Home toggle={toggle} isOpen={isOpen} slides={SliderData} />{" "}
