@@ -19,33 +19,40 @@ const About = ({ toggle, isOpen }) => {
           <div className="textcontainer">
             <h2>Unsere Mission</h2>
             <p>
-              Wir sind erst zufrieden, wenn Sie zufrieden sind. Deshalb ist es
-              uns wichtig, Ihnen bei Ihrem Bau- oder Renovierungsvorhaben mit
-              Rat und Tat zur Seite stehen. An unserem Standort in Beren freuen
-              sich qualifizierte Fachleute und ein hochmotiviertes Team darauf,
-              Sie bei Ihrem Projekt zu unterstützen.
+              Deluxe Ajgeraj ist ein Familienunternehmen mit über 10 Jahren
+              Erfahrung. Wir sind erst zufrieden, wenn Sie zufrieden sind.
+              Deshalb ist es uns wichtig, Ihnen bei Ihrem Bau- oder
+              Renovierungsprojekt mit Rat und Tat zur Seite zu stehen. An
+              unserem Standort in Beren freuen sich qualifizierte Fachkräfte und
+              ein motiviertes Team darauf, Sie bei Ihrem Projekt zu
+              unterstützen. Wir tun Reinigungen, Umbau, Renovationen und
+              Betriebsunterhalt.
             </p>
           </div>
         </div>
         <div className="secondsection">
           <div className="imagecontainertwo"></div>
           <div className="textcontainer">
-            <h2>DELUXE AJGERAJ</h2>
+            <h2>Reinigungen</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores,
-              similique fuga. Ut nemo assumenda rem quia cum obcaecati soluta
-              delectus.
+              Wir kümmern uns um die Reinigung Ihres Zuhauses und lassen Ihnen
+              Zeit, Ihr Zuhause zu genießen – anstatt sich Gedanken über die
+              Reinigung zu machen.
+              <br /> Wir bieten: Regelmäßiger Reinigungsservice,
+              Fensterreinigungsservice, Umzugsreinigungsservice
             </p>
           </div>
         </div>
         <div className="thirdsection">
           <div className="imagecontainerthree">
             <div className="textcontainer top">
-              <h2>DELUXE AJGERAJ</h2>
+              <h2>Betriebsunterhaltung</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Maiores, similique fuga. Ut nemo assumenda rem quia cum
-                obcaecati soluta delectus.
+                Die regelmäßige Pflege Ihres Gartens kann mit zunehmendem Alter
+                schwieriger werden. Wir können Sie mit vertrauenswürdigen,
+                zuverlässigen Gärtnern verbinden, die Ihnen helfen können: Rasen
+                mähen, Beschneiden, Schneiden und Unkraut jäten, Mulchen,
+                Futter- und Wasserpflanzen
               </p>
             </div>
           </div>

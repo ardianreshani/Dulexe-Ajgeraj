@@ -217,7 +217,7 @@ const HeroTitle = styled(motion.h1)`
 const HeroSubTitle = styled(motion.h4)`
   font-size: 1.3rem;
   line-height: 1.4em;
-  width: 50%;
+  width: 80%;
   font-weight: 400;
   padding-bottom: 2rem;
   @media only screen and (max-width: 320px) {

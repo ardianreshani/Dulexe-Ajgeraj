@@ -53,6 +53,7 @@ const Footer = () => {
           </div>
           <div className="contact-items">
             <Link
+              to="#"
               onClick={() =>
                 goto("https://www.facebook.com/Deluxe-Ajgeraj-107207164985989")
               }
@@ -60,6 +61,7 @@ const Footer = () => {
               <img src={FbIcone} alt="FbIcone" width="34px" />
             </Link>
             <Link
+              to="#"
               onClick={() => goto("https://www.instagram.com/deluxeajgeraj/")}
             >
               <img src={InstagramICon} alt="InstagramICon" width="34px" />
@@ -70,7 +72,9 @@ const Footer = () => {
       <div className="copyright">
         <p>
           &copy; Copyright <span id="year">{getYear()}</span> | by{" "}
-          <Link onClick={() => goto("https://www.ardian.io")}>Ardian</Link>
+          <Link to="#" onClick={() => goto("https://www.ardian.info/")}>
+            Ardian
+          </Link>
         </p>
       </div>
     </>

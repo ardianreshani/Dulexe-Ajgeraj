@@ -12,7 +12,7 @@ const NavBar = ({ toggle }) => {
   return (
     <Nav>
       <Link to="/">
-        <Logo src={LogoSrc} width="100px" height="60px" />
+        <Logo src={LogoSrc} width="100px" height="60px" alt="Logo" />
       </Link>
       <MenuBars onClick={toggle} />
       <NavMenu>

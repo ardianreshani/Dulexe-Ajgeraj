@@ -5,12 +5,25 @@ import Email from "../images/envelope.png";
 import Footer from "../componets/Footer";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animate";
-import { useForm, ValidationError } from "@formspree/react";
+import emailjs from "emailjs-com";
+
+const Mailer = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_k9czyir",
+      "template_uewcxur",
+      e.target,
+      "user_lLqFzc9qYfVqRfGD9VO1l"
+    )
+    .then((res) => {
+      console.log(res);
+    });
+  e.target.reset();
+};
+
 const Contact = () => {
-  const [state, handleSubmit] = useForm("mleazlgw");
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
   return (
     <ContactStyle
       exit="exit"
@@ -26,45 +39,24 @@ const Contact = () => {
       <div className="wraper">
         {" "}
         <div className="from">
-          <form onSubmit={handleSubmit}>
-            <label>
+          <form onSubmit={Mailer}>
+            <label for="name">
               Vorname und Nachname: * <input type="text" name="name" />
             </label>
-            <ValidationError prefix="name" field="name" errors={state.errors} />
-            <label>
+
+            <label for="email">
               E-mail Adresse: *
               <input type="email" name="email" />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
             </label>
-            <label>
+            <label for="number">
               Telefonnummer: *
               <input type="number" name="number" />
-              <ValidationError
-                prefix="Number"
-                field="number"
-                errors={state.errors}
-              />
             </label>
-            <label>
+            <label for="message">
               Nachricht: *<textarea name="message" cols="5" rows="1"></textarea>
-              <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-              />
             </label>
             <input type="hidden" name="form-name" value="contact" />
-            <div
-              class="g-recaptcha"
-              data-sitekey="6Lf3IXkcAAAAAFZYUN6TuqzWAFxF-ni0RQ7Sf_t8"
-            ></div>
-            <button type="submit" disabled={state.submitting}>
-              Send
-            </button>
+            <button type="submit">Send</button>
           </form>
         </div>
         <div className="info">
@@ -82,7 +74,7 @@ const Contact = () => {
           </div>
           <div className="contact-items">
             <img src={Email} alt="Email logo" width="34px" height="34px" />
-            <p>info@deluxeajgeraj.ch</p>
+            <p>info@deluxeinfo.ch</p>
           </div>
         </div>
       </div>
